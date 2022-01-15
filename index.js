@@ -17,8 +17,12 @@ function Update() {
     const msSinceMidnight = now - midnight;
     const secondsSinceMidnight = Math.floor(msSinceMidnight / 1000);
     const ks = secondsSinceMidnight / 1000;
+    let formatted = ks.toFixed(3);
+    if (formatted.length === 5) {
+	formatted = '0' + formatted;
+    }
     const timeOfDayLabel = document.getElementById('timeofday');
-    timeOfDayLabel.innerText = ks.toFixed(3);
+    timeOfDayLabel.innerText = formatted;
     const dateAndYearLabel = document.getElementById('dateandyear');
     dateAndYearLabel.innerText = dateAndYearText;
 }
