@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    Update();
     setInterval(Update, 200);
 });
 
