@@ -5,13 +5,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function Update() {
     const now = new Date();
-    const gregorianYear = now.getFullYear();
-    const holoceneYear = gregorianYear + 10000;
-    const start = new Date(gregorianYear, 0, 0);
+    const year = now.getFullYear();
+    const start = new Date(year, 0, 0);
     const diff = now - start;
     const oneDay = 1000 * 60 * 60 * 24;
     const dayOfYear = Math.floor(diff / oneDay);
-    const dateAndYearText = `Day ${dayOfYear} of year ${holoceneYear}`;
+    const dateAndYearText = `Day ${dayOfYear} of year ${year}`;
     const midnight = new Date();
     midnight.setHours(0, 0, 0, 0);
     const msSinceMidnight = now - midnight;
